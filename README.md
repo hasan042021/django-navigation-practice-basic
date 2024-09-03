@@ -1,0 +1,1 @@
+# django-navigation-practice-basic

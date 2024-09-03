@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul
+      style="
+        list-style: none;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 10px;
+        margin: 0;
+        padding: 1rem;
+      "
+    >
+      <li style="border: 1px solid blue; padding: 4px; border-radius: 5px">
+        <a style="text-decoration: none" href="/">Home</a>
+      </li>
+      <li style="border: 1px solid blue; padding: 4px; border-radius: 5px">
+        <a style="text-decoration: none" href="/navigation/about"> About</a>
+      </li>
+      <li style="border: 1px solid blue; padding: 4px; border-radius: 5px">
+        <a style="text-decoration: none" href="/navigation/contact">Contact</a>
+      </li>
+    </ul>
+    <h1 style="padding: 1rem; padding-top: 0">This is about page</h1>
+    <div
+      style="
+        padding: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px 40px;
+      "
+    >
+      <h3>Django filters practice</h3>
+      <hr />
+      <p>Author Name: {{author}}</p>
+      {% if age >= 20 %}
+      <p>You will get a driver license</p>
+      {% endif %} {%for course in courses %}
+      <h2>{{ course.id }}</h2>
+      <p>{{ course.name }}</p>
+      {% endfor %}
+    </div>
+  </body>
+</html>
