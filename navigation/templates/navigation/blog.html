@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul
+      style="
+        list-style: none;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 10px;
+        margin: 0;
+        padding: 1rem;
+      "
+    >
+      <li style="border: 1px solid blue; padding: 4px; border-radius: 5px">
+        <a style="text-decoration: none" href="/">Home</a>
+      </li>
+      <li style="border: 1px solid blue; padding: 4px; border-radius: 5px">
+        <a style="text-decoration: none" href="/navigation/about"> About</a>
+      </li>
+      <li style="border: 1px solid blue; padding: 4px; border-radius: 5px">
+        <a style="text-decoration: none" href="/navigation/contact">Contact</a>
+      </li>
+      <li style="border: 1px solid blue; padding: 4px; border-radius: 5px">
+        <a style="text-decoration: none" href="/navigation/blog">Blog</a>
+      </li>
+    </ul>
+    <h1 style="padding: 1rem; padding-top: 0">This is blogs page</h1>
+    <div
+      style="
+        padding: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px 40px;
+      "
+    >
+      <h3>Django loop, condition & filters practice</h3>
+      <hr />
+      <details>
+        <summary>Value</summary>
+        <p>Author Name: {{author}}</p>
+      </details>
+      <details>
+        <summary>Join</summary>
+        <p>{{lst | join:"-" }}</p>
+      </details>
+      <details>
+        <summary>Date</summary>
+        <p>Birthday: {{ birthday | date:"D d M Y" }}</p>
+      </details>
+      <details>
+        <summary>Condition</summary>
+        {% if age >= 20 %}
+        <p>You will get a driver license</p>
+        {% endif %}
+      </details>
+      <details>
+        <summary>For Loop & Truncate words</summary>
+        {%for course in courses %}
+        <div style="">
+          <h2>Course ID: {{ course.id }}</h2>
+          <p>Course Name: {{ course.name }}</p>
+          <p>Description: {{course.description | truncatewords:10}}</p>
+        </div>
+        {% endfor %}
+      </details>
+      <details>
+        <summary>Title</summary>
+        <p>{{ "LeArniNG DJANGO" | title }}</p>
+      </details>
+    </div>
+  </body>
+</html>
